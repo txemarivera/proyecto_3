@@ -1,18 +1,18 @@
-# import sys
-# import os
+import sys
+import os
 
-# # Agregar la ruta del directorio raíz del proyecto al PYTHONPATH
-# sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../')))
+# Agregar la ruta del directorio raíz del proyecto al PYTHONPATH
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../')))
 
-# # Ahora puedes importar tus módulos normalmente
-# from modules.ml_func import *
+# Ahora puedes importar tus módulos normalmente
+from modules.ml_func import *
 
 
 import plotly.express as px
 import streamlit as st
 from PIL import Image
 
-from ..modules.ml_func import *
+from modules.ml_func import *
 from about import about_app
 from eda_1 import eda_1_app
 from eda_2 import eda_2_app
