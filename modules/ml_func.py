@@ -25,7 +25,7 @@ def read_data():
     try:
         df_trading_input = pd.read_csv("./data/outputs/df_trading_out.csv")
     except:
-        df_trading_input = pd.read_csv("data/inputs/df_trading_input.csv")
+        df_trading_input = pd.read_csv("./data/inputs/df_trading_input.csv")
     data_news_sentiment = pd.read_csv("./data/inputs/data_news_sentiment.csv")
 
     return df_trading_input,data_news_sentiment
