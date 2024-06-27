@@ -1,0 +1,8 @@
+.python-version
+__pycache__
+old/
+.env
+config.json
+venv
+data/raw/
+data/primary/
