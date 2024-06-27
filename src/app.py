@@ -2,7 +2,7 @@ import plotly.express as px
 import streamlit as st
 from PIL import Image
 
-from modules.ml_func import *
+from .modules.ml_func import *
 from about import about_app
 from eda_1 import eda_1_app
 from eda_2 import eda_2_app
