@@ -23,10 +23,10 @@ PAGE_CONFIG = {"page_title"             : "ULTIMATE TRADING APP",
 
 def read_data():
     try:
-        df_trading_input = pd.read_csv(r".\data\outputs\df_trading_out.csv")
+        df_trading_input = pd.read_csv("./data/outputs/df_trading_out.csv")
     except:
-        df_trading_input = pd.read_csv(r".\data\inputs\df_trading_input.csv")
-    data_news_sentiment = pd.read_csv(r".\data\inputs\data_news_sentiment.csv")
+        df_trading_input = pd.read_csv("data/inputs/df_trading_input.csv")
+    data_news_sentiment = pd.read_csv("./data/inputs/data_news_sentiment.csv")
 
     return df_trading_input,data_news_sentiment
 
@@ -34,10 +34,10 @@ def load_models():
     # if not os.getcwd().endswith("models"):
     #     os.chdir("models")
 
-    model_trading = load_model(r".\models\model_trading.keras", compile=False)
+    model_trading = load_model("./models/model_trading.keras", compile=False)
     model_trading.compile(optimizer = "adam", loss = "mse")
     
-    model_glove_lstm = load_model(r".\models\model_glove_lstm.keras", compile=False)
+    model_glove_lstm = load_model("./models/model_glove_lstm.keras", compile=False)
     model_glove_lstm.compile(optimizer='Adam', loss='categorical_crossentropy', metrics=['accuracy'])  
 
     # os.chdir("..")
